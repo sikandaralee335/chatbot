@@ -12,6 +12,7 @@ import {
   Zap,
   Image as ImageIcon
 } from 'lucide-react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { generateSynthesis } from './services/gemini';
 import { Message, SynthesisResponse } from './types';
 
@@ -275,6 +276,7 @@ export default function App() {
           </div>
         </div>
       </footer>
+      <SpeedInsights />
     </div>
   );
 }
