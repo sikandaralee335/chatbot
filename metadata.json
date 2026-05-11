@@ -1,0 +1,6 @@
+{
+  "name": "Visual Synthesis Engine",
+  "description": "An AI-powered interface that translates every query into a hyper-detailed visual blueprint and cinematic prompt before providing a textual synthesis.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}

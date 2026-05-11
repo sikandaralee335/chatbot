@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;700;900&family=Playfair+Display:ital@1&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-display: "Outfit", sans-serif;
+  --font-serif: "Playfair Display", serif;
+  
+  --color-accent: #00F0FF; /* Electric Cyan */
+  --color-base: #0A0A0B; /* Deep Noir */
+}
+
+@layer base {
+  body {
+    @apply bg-base text-[#F8F8F8] antialiased selection:bg-accent selection:text-black;
+    font-family: var(--font-sans);
+  }
+}
+
+/* Custom Utilities */
+.tech-border {
+  @apply border border-white/10;
+}
+
+.tech-divider {
+  @apply border-white/10;
+}
+
+.bg-number {
+  @apply text-[96px] font-black text-white/5 leading-none select-none pointer-events-none;
+}
+
+.section-label {
+  @apply text-xs font-bold uppercase tracking-[0.2em] text-accent;
+}
+
+.mono-label {
+  @apply text-[10px] font-mono uppercase text-white/40 tracking-[0.15em];
+}
+
+@keyframes pulse-cyan {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.animate-cursor {
+  animation: pulse-cyan 1s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
